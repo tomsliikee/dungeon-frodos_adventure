@@ -1,15 +1,15 @@
 # Dungeon Arena: Frodo's Adventure
 
 ```text
-                    ___              _
-                   / __\ __ ___   __| | ___  ___
-                   / _\| '__/ _ \ / _` |/ _ \/ __|
+                      ___              _
+                     / __\ __ ___   __| | ___  ___
+                    / _\| '__/ _ \ / _` |/ _ \/ __|
                    / /  | | | (_) | (_| | (_) \__ \
                    \/   |_|  \___/ \__,_|\___/|___/
 
-                _       _                 _
-               /_\   __| |_   _____ _ __ | |_ _   _ _ __ ___
-               //_\\ / _` \ \ / / _ \ '_ \| __| | | | '__/ _ \
+                  _       _                 _
+                 /_\   __| |_   _____ _ __ | |_ _   _ _ __ ___
+                //_\\ / _` \ \ / / _ \ '_ \| __| | | | '__/ _ \
                /  _  \ (_| |\ V /  __/ | | | |_| |_| | | |  __/
                \_/ \_/\__,_| \_/ \___|_| |_|\__|\__,_|_|  \___|
 ```
@@ -20,19 +20,19 @@ Dungeon Arena is a procedural, terminal-based roguelike game inspired by *The Lo
 
 ## Core Features
 
-- **Procedural Maze Generation:** Leverages a Depth-First Search (DFS) algorithm combined with randomized room carving to generate a unique labyrinth on every run, adapted to your terminal dimensions.
+- **Procedural Maze Generation:** Uses a Depth-First Search (DFS) algorithm combined with randomized room carving to generate a random labyrinth on every run, AND dynamic to your terminal.
 - **Autonomous AI Rival:** The Mouth of Sauron (`*`) operates in the background, hunting for weapons, shields, and weak mobs on its side of the dungeon, eventually marching to the central arena to challenge you.
 - **Dynamic Combat System:** Initiated whenever a character steps onto a tile occupied by another entity. Turn initiative is based on who makes the movement (first strike). Damage is mathematically computed from attack (`ATK`) and defense (`DEF`) stats.
-- **Traps & Upgrades:** Collect legendary items like the sword Andúril (`(`) to boost attack or Mithril Armor (`[`) to boost defense. Beware of hidden traps (`^`) that deal damage and sap stats!
-- **Interactive Tutorial:** Includes an introductory sequence with lore and interactive screens explaining the controls and mechanics.
-- **Dynamic Status Bar:** Renders real-time announcements of recent game events (such as combat, item pickups, or trap triggers) below the map.
+- **Traps & Upgrades:** Collect legendary items like the sword Anduril (`(`) to boost attack or Mithril Armor (`[`) to boost defense. Beware of hidden traps (`^`) that deal damage and sap stats!
+- **Tutorial:** Includes an tutorial with lore and interactive screens explaining the controls and mechanics.
+- **Status Bar:** Renders a small statusbar at the bottom of recent game events (such as combat, item pickups, or trap triggers) below the map.
 - **Lord of the Rings Audio:** Uses Pygame mixer to play a dynamic soundtrack that seamlessly changes from ambient themes to tense battle music when entering the arena.
 
 ---
 
 ## Setup & Execution
 
-### Prerequisites
+### Setup
 
 - **Python:** Version 3.8 or higher.
 - **Terminal:** Supports standard ANSI escape codes for coloring and styling.
@@ -76,7 +76,6 @@ python dungeon.py
 - `╣` / `╠` **Arena Doors:** Player-specific blue doors that seal behind you once entered.
 - **Monsters (`D`, `G`, `J`, `N`, `B`, `R`, `F`):** Mobs with varying stats and sense ranges that hunt characters down when they come too close.
 
-→ [Jump to the Development Protocol](#project-development-protocol)
 
 ---
 
@@ -84,15 +83,15 @@ python dungeon.py
 
 **Author:** Thomas Haiden | **Date:** 12.07.2026
 
-This protocol documents the step-by-step engineering process of **Dungeon Arena**, transitioning from early procedural code skeletons into a modularized, fully featured terminal game with pathfinding AI, real-time events, and dynamic media.
+This protocol documents the step-by-step engineering process of **Dungeon Arena**, transitioning from early procedural code skeletons into a (almost complete), fully featured terminal game with pathfinding AI, real-time events, and dynamic media.
 
 ## Project Overview and Objectives
 
-The primary goal of this project was to implement a highly interactive terminal-based game that demonstrates fundamental computer science concepts:
+The goal of this project was to implement a interactive terminal-based game that combines the theory we learned in the Algorithm and Datastructes lessons and try to combine in with a nice simple game in the terminal:
 1. **Procedural Level Design:** Using Depth-First Search (DFS) algorithm with backtracking to ensure a solvable, fully connected maze.
-2. **Pathfinding & AI Design:** Implementing the **A* Search Algorithm** with Manhattan distance heuristics to handle real-time tracking for mobs and an autonomous opponent.
-3. **Software Architecture:** Refactoring procedural spaghetti code into a clean Model-View-Controller (MVC) style modular structure.
-4. **State Control:** Managing asynchronous input collection and synchronized turn rendering without visual screen flickering.
+2. **Pathfinding & AI Design:** Implementing the **A* Search Algorithm** with Manhattan distance heuristics to handle real-time tracking for mobs and an the ai opponent.
+3. **Gameplay:** I also wanted to ensure the game was fun and somehow enjoyable. Also the music and sound effect "ensure" that the game is not just a bunch of text and numbers.
+4. **Python:** Also a real goal for me was the learning of python. I didnt really know how to write python code so I implemented in python to learn it. 
 
 ---
 
