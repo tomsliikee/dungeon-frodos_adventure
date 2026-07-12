@@ -139,7 +139,7 @@ gantt
 
 ### Phase 5: Rebranding, Multi-Phase AI, and Final Polish
 * **Dynamic Audio Overhaul:** Expanded the sound directory with three distinct tracks from *The Lord of the Rings*. Hooked them to dynamically transition from exploration to battle music when entering the arena (Commit `653f18c`).
-* **Interactive Tutorial:** Rebranded the game's setting to LOTR (Frodo vs. Mouth of Sauron) and wrote a multi-chapter, interactive CLI tutorial (Commit `4d7d9f5`).
+* **Interactive Tutorial:** Rebranded the game's setting to LOTR (Frodo vs. Mouth of Sauron) and wrote a multi-chapter, interactive tutorial (Commit `4d7d9f5`).
 * **Multi-Phase AI Decision Tree:** Upgraded the AI opponent in [player2.py](file:///C:/Users/thoma/Desktop/GIT/Haiden/player2.py) to use a 3-phase behavioral algorithm (Commit `ab51789`).
 * **Performance Refinements:** Optimized the A* search algorithm heap space and adjusted recursion limits to prevent stack overflows on large terminal screens (Commit `ab51789`).
 
@@ -148,7 +148,7 @@ gantt
 ## Technical Implementation Details
 
 ### 1. Procedural Generation (`DFS`)
-The dungeon generator uses Depth-First Search with backtracking to carve paths. Starting at a cell, it randomly selects an unvisited neighbor two units away, breaks the wall between them, and recurses. This ensures a fully traversable maze. Rooms are carved by carving out $N \times M$ spaces randomly.
+The dungeon generator uses Depth-First Search with backtracking to carve paths. Starting at a cell, it randomly selects an unvisited neighbor two units away, breaks the wall between them, and recurses. This ensures a fully functional maze. Rooms are made by carving out $N \times M$ spaces randomly.
 
 ### 2. A* Search Algorithm
 The pathfinding engine uses the $f(n) = g(n) + h(n)$ cost function:
@@ -184,4 +184,14 @@ This algorithm is utilized by:
 
 ## Success of the Implementation
 
-The final product delivers a fully completed, stable console roguelike. The separation of concerns between modules allows for easy scalability (e.g. adding new entity classes or tweaking generation variables). The inclusion of Lord of the Rings aesthetics, dynamic sound effects, and a highly responsive autonomous AI rival results in an engaging, challenging terminal game.
+The final product delivers a fully completed, stable console roguelike. The separation of themes between modules allows for easy scalability (e.g. adding new entity classes or tweaking generation variables). The inclusion of Lord of the Rings aesthetics, dynamic sound effects, and a highly responsive autonomous AI rival results in an engaging, challenging terminal game.
+
+---
+
+## Conclusion
+
+I really liked this project. I needed a lot more time then I thought and first and the small technical challenges and details requested the most time out of me, but in the end I was able to deliver a product that I'm proud of. 
+
+It isn't the best, the most optimized or the most enjoyable to play, but it was a great learning experience and I'm proud of what I accomplished in the given time. At the end I want to thank you Kevin for introducing us to such a nice project. I hope you enjoy playing it as much as I enjoyed creating it. 
+
+I even made an repo in my own github account and pushed it to keep it there forever. As my first "big" project I created.
